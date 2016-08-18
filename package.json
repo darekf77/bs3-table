@@ -1,0 +1,24 @@
+{
+  "name": "bs3-table",
+  "version": "0.0.2",
+  "description": "Very universal table component for angular 2 appst ",
+  "main": "karma.conf.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/darekf77/bs3-table.git"
+  },
+  "keywords": [
+    "angular2",
+    "table",
+    "bootstrap"
+  ],
+  "author": "Dariusz Filipiak",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/darekf77/bs3-table/issues"
+  },
+  "homepage": "https://github.com/darekf77/bs3-table#readme"
+}
