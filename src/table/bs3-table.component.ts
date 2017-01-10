@@ -5,7 +5,7 @@ import {
 } from '@angular/core';
 
 import { Subscription, Observable } from 'rxjs';
-import { PAGINATION_DIRECTIVES, PaginationComponent } from 'ng2-bootstrap/ng2-bootstrap';
+import { PaginationComponent } from 'ng2-bootstrap/ng2-bootstrap';
 import { Log, Level } from 'ng2-logger/ng2-logger';
 const log = Log.create('bs3-table', Level.__NOTHING);
 log.color = 'blue';
@@ -21,7 +21,6 @@ const id: string = 'bs3-table';
     selector: id,
     template: require(`./${id}.component.html`),
     styles: [require(`./${id}.component.scss`)],
-    directives: [Bs3TableRow, Bs3TableDetails, PAGINATION_DIRECTIVES],
     encapsulation: ViewEncapsulation.None
 })
 export class Bs3Table implements OnInit, OnDestroy, AfterContentInit {
@@ -41,7 +40,7 @@ export class Bs3Table implements OnInit, OnDestroy, AfterContentInit {
         this.table.changePage();
     }
 
-    table: Table<any> = new Table<ExampleRowInterface>('Imie', 'Nazwsko', 'Data')
+    @Input() table: Table<any> = new Table<ExampleRowInterface>('Imie', 'Nazwsko', 'Data')
         .addRow({ name: 'asdasd', age: 12, date: new Date() })
         .addRow({ name: ' asdasd', age: 13 });
 

@@ -27,10 +27,15 @@
                                 <ng-content></ng-content>
                             </tbody>
                         </table>
-                        <!--<pagination [totalItems]="table.page.totalElements" 
-                            [firstText]="firstText" [lastText]="lastText" [nextText]="nextText" [previousText]="prevText"
-                            [(ngModel)]="table.page.number" (pageChanged)="changePage($event)" [maxSize]="3" class="pagination-sm"
-                            [boundaryLinks]="true" [rotate]="false"></pagination>-->
+                        <pagination [totalItems]="table.page.totalElements" 
+                            [firstText]="firstText" 
+                            [lastText]="lastText" 
+                            [nextText]="nextText" 
+                            [previousText]="prevText"
+
+                            [(ngModel)]="table.page.number" 
+                            (pageChanged)="changePage($event)" [maxSize]="3" class="pagination-sm"
+                            [boundaryLinks]="true" [rotate]="false"></pagination>
                             <!-- *ngIf="table.page.totalElements < table.page.numOfRows"-->
                     </div>
                     
