@@ -36,8 +36,7 @@ export class DataService {
 
 @Component({
   selector: 'app-preview',
-  templateUrl: './preview.component.html',
-  styleUrls: ['./preview.component.css']
+  template: `<bs3-table [table]="table" ></bs3-table>`
 })
 export class PreviewComponent implements OnInit {
 
