@@ -9,7 +9,7 @@ const log = Log.create('bs3-table-row', Level.__NOTHING);
 const id = 'bs3-table-row';
 
 @Component({
-    selector: id,
+    selector: 'tr',
     template: require(`./${id}.component.html`),
     styles: [require(`./${id}.component.scss`)]
 })

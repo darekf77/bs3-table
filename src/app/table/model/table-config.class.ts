@@ -11,7 +11,7 @@ export class TableConfig {
     constructor(headers: TableHeader[]) {
         this.page = <Page>{};
         this.page.number = 1;
-        this.page.numOfRows = 10;
+        this.page.size = 10;
         this.page.totalElements = 100;
         this.headers = headers;
     }

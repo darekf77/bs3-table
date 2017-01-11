@@ -20,12 +20,11 @@ const id: string = 'bs3-table';
 @Component({
     selector: id,
     template: require(`./${id}.component.html`),
-    styles: [require(`./${id}.component.scss`)],
-    encapsulation: ViewEncapsulation.None
+    styles: [require(`./${id}.component.scss`)]
 })
 export class Bs3Table implements OnInit, OnDestroy, AfterContentInit {
 
-    sortType = SortType;
+    sortType: SortType;
     @ContentChildren(Bs3TableRow) rowsContent: QueryList<Bs3TableRow>;
     @ContentChildren(Bs3TableDetails) rowsDetails: QueryList<Bs3TableDetails>;
 
@@ -41,27 +40,26 @@ export class Bs3Table implements OnInit, OnDestroy, AfterContentInit {
     }
 
     @Input() table: Table<any> = new Table<ExampleRowInterface>('Imie', 'Nazwsko', 'Data')
+        .setColumnsFields('name', 'age', 'data')
+        .setEmptyCellContent('-')
         .addRow({ name: 'asdasd', age: 12, date: new Date() })
-        .addRow({ name: ' asdasd', age: 13 });
+        .addRow({ name: ' asdasd', age: 13 })
+        .addRow({ name: ' asdasd', age: 13 })
+        .addRow({ name: ' asdasd', age: 13 })
+        .addRow({ name: ' asdasd', age: 13 })
+        .addRow({ name: ' asdasd', age: 13 })
+        .addRow({ name: ' asdasd', age: 13 })
+        .addRow({ name: ' asdasd', age: 13, date: new Date() })
+        .addRow({ name: ' asdasd', age: 13 })
+        .addRow({ name: ' asdasd', age: 13 })
+        .addRow({ name: ' asdasd', age: 13 })
+
 
     use(table: Table<any>) {
         this.table = table;
         this.table.changePage();
     }
 
-    static get(bs3TableId: string): Promise<Bs3Table> {
-        log.i('instances', Bs3Table.instances);
-        log.i('bs3TableId', bs3TableId);
-        return new Promise<Bs3Table>((resove, reject) => {
-            setTimeout(() => {
-                if (Bs3Table.instances === undefined ||
-                    Bs3Table.instances[bs3TableId] === undefined)
-                    reject('Bs3Table: no instace with id: ' + bs3TableId);
-                resove(Bs3Table.instances[bs3TableId]);
-            });
-        });
-    }
-    static instances = {};
 
     constructor() {
         // let d = this.table.saveConfig();
@@ -70,7 +68,6 @@ export class Bs3Table implements OnInit, OnDestroy, AfterContentInit {
     }
 
     ngOnInit() {
-        Bs3Table.instances[this.id] = this;
 
     }
 

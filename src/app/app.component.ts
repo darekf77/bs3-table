@@ -5,39 +5,27 @@ import { Component, ViewEncapsulation, ViewContainerRef } from '@angular/core';
 
 import { AppState } from './app.service';
 
-require('!style-loader!css-loader!@angular/material/core/theming/prebuilt/indigo-pink.css')
 require('!style-loader!css-loader!bootstrap/dist/css/bootstrap.css');
-require('!style-loader!css-loader!assets/vendor/highlight/vs.min.css');
-
-require('!script-loader!assets/vendor/highlight/highlight.min.js');
-require('!script-loader!assets/vendor/highlight/typescript.min.js');
 
 /*
  * App Component
  * Top Level Component
  */
 @Component({
-  selector:      'app',
+  selector: 'app',
   encapsulation: ViewEncapsulation.None,
-  styleUrls:     [
+  styleUrls: [
     './app.style.css'
   ],
-  template:      `
-    <nav class="navbar navbar-light bg-faded" role="navigation" id="top-nav">
-    <span class="navbar-brand">Viadialog Components</span>
-    
-</nav>
-<router-outlet></router-outlet>
-
-  `
+  template: require('./app.component.html')
 })
 export class App {
   angularclassLogo = 'assets/img/angularclass-avatar.png';
-  name             = 'Angular 2 Webpack Starter';
-  url              = 'https://twitter.com/AngularClass';
+  name = 'Angular 2 Webpack Starter';
+  url = 'https://twitter.com/AngularClass';
 
   constructor(public appState: AppState,
-              private viewContainerRef: ViewContainerRef) {
+    private viewContainerRef: ViewContainerRef) {
     this.viewContainerRef = viewContainerRef;
   }
 

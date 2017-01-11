@@ -30,8 +30,28 @@ export class Table<R> {
     get rows() {
         return this._rows;
     }
+
+    private fixEmpty() {
+
+    }
+
+    private _emptyCellContent: string = '';
+
+    setEmptyCellContent(content: string) {
+        this._emptyCellContent = content;
+        return this;
+    }
+
     addRow(...row: R[]) {
-        row.forEach(r => this._rows.push(r));
+        row.forEach(r => {
+            if (Object.keys(r).length < this.headers.length && this.columns !== undefined) {
+                let o = <Object>r;
+                this.columns.forEach(c => {
+                    if (r[c] === undefined || r[c] === null) r[c] = this._emptyCellContent;
+                });
+            }
+            this._rows.push(r)
+        });
         return this;
     }
 

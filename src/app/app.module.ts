@@ -1,34 +1,24 @@
 import { NgModule, ApplicationRef } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
-import { HttpModule } from '@angular/http';
+import { HttpModule, JsonpModule } from '@angular/http';
 import { RouterModule } from '@angular/router';
 import { removeNgStyles, createNewHosts, createInputTransfer } from '@angularclass/hmr';
 
 
-import { Ng2BootstrapModule } from 'ng2-bootstrap';
-import { MaterialModule } from '@angular/material/module';
-
 import { ENV_PROVIDERS } from './environment';
 import { ROUTES } from './app.routes';
 import { APP_RESOLVER_PROVIDERS } from './app.resolver';
-import { VDDatatableModule } from './element-list';
 import { AppState, InternalStateType } from './app.service';
 import { App } from './app.component';
-import { ElementListComponent } from './element-list/element-list.component';
-import { ExampleFormComponent } from './example-form/example-form.component';
 import { NoContent } from './no-content';
-import { PageScroll } from 'ng2-page-scroll/src/ng2-page-scroll.directive';
-import { Ng2PageScrollModule } from 'ng2-page-scroll';
-import { HighlightCodeDirective } from './directives/code-highlight.directive';
 import { TextMaskModule } from 'angular2-text-mask';
 
-import { DatatablePreviewComponent } from './element-list/elements/datatable-preview/datatable-preview.component';
-
-import { ViadialogComponentsModule, EN_COMPONENTS, } from "../../index";
-
+import { BsTableModule } from './table';
+import { Resource } from 'ng2-rest/ng2-rest';
 
 
+import { PreviewComponent, DataService } from './preview/preview.component';
 
 type StoreType = {
     state: InternalStateType,
@@ -41,10 +31,11 @@ type StoreType = {
 // Application wide providers
 const APP_PROVIDERS = [
     ...APP_RESOLVER_PROVIDERS,
-    AppState
+    AppState,
+    Resource,
+    DataService
 ];
 
-console.log('MaterialModule', MaterialModule)
 
 /**
  * `AppModule` is the main entry point into Angular2's bootstraping process
@@ -53,24 +44,16 @@ console.log('MaterialModule', MaterialModule)
     bootstrap: [App],
     declarations: [
         App,
-        ElementListComponent,
-        ExampleFormComponent,
-        HighlightCodeDirective,
-        NoContent,
-        DatatablePreviewComponent
-        ,],
+        PreviewComponent
+    ],
     imports: [ // import Angular's modules
+        JsonpModule,
+        BsTableModule,
         BrowserModule,
         FormsModule,
         ReactiveFormsModule,
         HttpModule,
-        RouterModule.forRoot(ROUTES, { useHash: false }),
-        Ng2BootstrapModule,
-        Ng2PageScrollModule,
-        TextMaskModule,
-        VDDatatableModule,
-        ViadialogComponentsModule,
-        MaterialModule.forRoot()
+        TextMaskModule
     ],
     providers: [ // expose our Services and Providers into Angular's dependency injection
         ENV_PROVIDERS,

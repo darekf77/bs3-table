@@ -1,0 +1,70 @@
+<div id="container" *ngIf="table" >
+    
+    <div class="row200percent"  [ngClass]="{'showDetails': table.selectedRow}" >
+
+        <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 half">
+
+
+            <div class="row">
+                <div class="panel-body">
+
+                    
+                    <div class="row">
+                        <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                            <div class="table-responsive">
+                                <table class="table table-hover">
+                                    <thead>
+                                        <tr>
+                                            <th *ngFor="let head of table.headers" (click)="sortBy(head)" style="cursor:pointer;">
+                                                {{head.name}}
+                                                <i class="glyphicon glyphicon-chevron-up" *ngIf="head.sort && head.sort ===  sortType.ASC"></i>
+                                                <i class="glyphicon glyphicon-chevron-down" *ngIf="head.sort && head.sort === sortType.DESC"></i>
+                                            </th>
+                                            <th *ngIf="!table.headers">Name</th>
+                                            <th *ngIf="!table.headers">Age</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody *ngIf="rowsContent.length === 0" >
+                                        <tr  *ngFor="let row of table.rows" [data]="row">
+                                        </tr>                                
+                                    </tbody>
+                                    <tbody *ngIf="rowsContent.length > 0"  >
+                                        <ng-content></ng-content>
+                                    </tbody>
+                                    
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12" style="text-align: center;" >
+                            <pagination [totalItems]="table.page.totalElements" 
+                                        [firstText]="firstText" 
+                                        [lastText]="lastText" 
+                                        [nextText]="nextText" 
+                                        [previousText]="prevText"
+
+                                        [(ngModel)]="table.page.number" 
+                                        (pageChanged)="changePage($event)" [maxSize]="3" class="pagination-md"
+                                        [boundaryLinks]="true" [rotate]="false"
+
+                                        *ngIf="table.rows && table.rows.length && table.rows.length >= table.page.size"
+                                        >
+                            </pagination>
+                        </div>
+                    </div>                    
+                    
+                </div>
+            </div>
+        </div>
+
+        <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 half">
+
+            <bs3-table-details (goBack)="table.selectedRow = undefined" >
+                <ng-content select="[details]"></ng-content>
+            </bs3-table-details>
+
+        </div>
+
+    </div>
+</div>

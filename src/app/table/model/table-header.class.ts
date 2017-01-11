@@ -1,21 +1,21 @@
 import { SortType } from './sort-type';
 
 export class TableHeader {
-    sort: SortType = SortType.__NONE;
+    sort: SortType;
     name: string;
     constructor(name: string) {
         this.name = name;
     }
     sortBy() {
         switch (this.sort) {
-            case SortType.__NONE:
-                this.sort = SortType.ASC;
+            case undefined || null:
+                this.sort = 'ASC';
                 break;
-            case SortType.ASC:
-                this.sort = SortType.DESC;
+            case 'ASC':
+                this.sort = 'DESC';
                 break;
-            case SortType.DESC:
-                this.sort = SortType.__NONE;
+            case 'DESC':
+                this.sort = undefined;
                 break;
             default:
                 console.error('BAD SORT SECIFICATION');

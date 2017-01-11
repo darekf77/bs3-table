@@ -1,4 +1,5 @@
 import { NgModule } from '@angular/core';
+import { CommonModule } from '@angular/common';
 
 import { Bs3TableRow, Bs3TableCell } from './bs3-table-row';
 import { Bs3Table } from './bs3-table.component';
@@ -15,7 +16,7 @@ const components = [
 ]
 
 @NgModule({
-    imports: [PaginationModule],
+    imports: [PaginationModule, CommonModule],
     exports: [
         ...components
     ],

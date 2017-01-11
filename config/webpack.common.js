@@ -165,19 +165,19 @@ module.exports = function (options) {
 
                 {
                     test: /\.woff(\?v=\d+\.\d+\.\d+)?$/,
-                    use: "url?limit=10000&mimetype=application/font-woff"
+                    use: "url-loader?limit=10000&mimetype=application/font-woff"
                 }, {
                     test: /\.woff2(\?v=\d+\.\d+\.\d+)?$/,
-                    use: "url?limit=10000&mimetype=application/font-woff"
+                    use: "url-loader?limit=10000&mimetype=application/font-woff"
                 }, {
                     test: /\.ttf(\?v=\d+\.\d+\.\d+)?$/,
-                    use: "url?limit=10000&mimetype=application/octet-stream"
+                    use: "url-loader?limit=10000&mimetype=application/octet-stream"
                 }, {
                     test: /\.eot(\?v=\d+\.\d+\.\d+)?$/,
-                    use: "file"
+                    use: "file-loader"
                 }, {
                     test: /\.svg(\?v=\d+\.\d+\.\d+)?$/,
-                    use: "url?limit=10000&mimetype=image/svg+xml"
+                    use: "url-loader?limit=10000&mimetype=image/svg+xml"
                 },
 
                 /* Raw loader support for *.html
