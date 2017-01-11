@@ -5,6 +5,7 @@ Description
 -----------
 
 Table module for angular2. Compatibile with bootstrap3.
+Quicket way to create table pagination in angular2.
 
 
 Instalation & Usage
@@ -52,7 +53,7 @@ public table: Table<any> = new Table<ExampleRowInterface>('Imie', 'Nazwsko', 'Da
 
 Class **Table** is very fexible and can be use for lots of different purpose, combining data in one place.
 
-[Pagination example ](https://darelf77.github.io/bs3-table)
+[Pagination example ](https://darekf77.github.io/bs3-table)
 
  ```ts
 import { Component, OnInit } from '@angular/core';
@@ -68,7 +69,7 @@ interface DataModel {
   date: Date;
 }
 
-// 
+// create simple pagination with ng2-rest inside your browser
 function mockController(req: MockRequest<DataModel>) {
   req.backend.models = req.backend.models.sort((a, b) => a.age - b.age);
   let page: Page = <Page>req.body;
