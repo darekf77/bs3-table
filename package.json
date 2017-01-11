@@ -1,9 +1,14 @@
 {
   "name": "bs3-table",
-  "version": "0.0.5",
+  "version": "0.0.6",
   "description": "Very universal table component for angular 2 appst",
   "keywords": [
-    "viadialog"
+    "angular2",
+    "datatable",
+    "table",
+    "ng2-rest",
+    "bootstrap",
+    "bootstrap3"
   ],
   "author": "Dariusz Filipiak (darekf77@gmail.com)",
   "license": "MIT",
