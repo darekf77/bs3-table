@@ -31,6 +31,10 @@ export class Table<R> {
         return this._rows;
     }
 
+    set rows(newRows:R[]) {
+        this.setData(newRows);
+    }
+
     private fixEmpty() {
 
     }

@@ -1,6 +1,6 @@
 {
   "name": "bs3-table",
-  "version": "0.0.7",
+  "version": "0.0.9",
   "description": "Very universal table component for angular 2 appst",
   "keywords": [
     "angular2",
