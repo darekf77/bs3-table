@@ -16,7 +16,7 @@ import { TextMaskModule } from 'angular2-text-mask';
 
 import { BsTableModule } from './table';
 import { Resource } from 'ng2-rest/ng2-rest';
-
+import { PaginationModule } from 'ng2-bootstrap';
 
 import { PreviewComponent, DataService } from './preview/preview.component';
 
@@ -47,6 +47,7 @@ const APP_PROVIDERS = [
         PreviewComponent
     ],
     imports: [ // import Angular's modules
+        PaginationModule.forRoot() ,
         JsonpModule,
         BsTableModule,
         BrowserModule,
