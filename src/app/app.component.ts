@@ -14,10 +14,8 @@ require('!style-loader!css-loader!bootstrap/dist/css/bootstrap.css');
 @Component({
   selector: 'app',
   encapsulation: ViewEncapsulation.None,
-  styleUrls: [
-    './app.style.css'
-  ],
-  template: require('./app.component.html')
+  styleUrls: ['./app.style.css'],
+  templateUrl: './app.component.html'
 })
 export class App {
   angularclassLogo = 'assets/img/angularclass-avatar.png';

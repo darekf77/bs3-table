@@ -2,10 +2,8 @@ import { Component, OnInit, Input, HostListener } from '@angular/core';
 
 import { Table } from '../model';
 
-const id = 'bs3-table-details-back';
-
 @Component({
-    selector: id,
+    selector: 'bs3-table-details-back',
     template: `
         <span class="glyphicon glyphicon-menu-left" ></span>
         <strong> {{backText}} </strong>

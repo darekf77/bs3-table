@@ -1,0 +1,28 @@
+# IDE-s #
+.idea
+
+.DS_Store
+
+# Node Files #
+/node_modules
+/bower_components
+npm-debug.log
+copy_crm.sh
+
+/coverage
+
+/copy
+
+/src/**/*.js
+/src/**/*.js.map
+/src/**/*.d.ts
+index.js
+index.js.map
+index.js.d.ts
+
+/copyž
+/typings
+/js
+ 
+
+ 

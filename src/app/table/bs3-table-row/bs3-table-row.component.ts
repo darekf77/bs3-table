@@ -1,17 +1,19 @@
-import { Component, OnInit, Input, AfterContentInit, ContentChildren, Type,
-    ContentChild, OnChanges, HostBinding, QueryList, ViewEncapsulation } from '@angular/core';
+import {
+    Component, OnInit, Input, AfterContentInit, ContentChildren, Type,
+    ContentChild, OnChanges, HostBinding, QueryList, ViewEncapsulation
+} from '@angular/core';
 import { Bs3TableCell } from './bs3-table-cell';
 
 
 import { Log, Level } from 'ng2-logger/ng2-logger';
 const log = Log.create('bs3-table-row', Level.__NOTHING);
 
-const id = 'bs3-table-row';
+
 
 @Component({
     selector: 'tr',
-    template: require(`./${id}.component.html`),
-    styles: [require(`./${id}.component.scss`)]
+    templateUrl: './bs3-table-row.component.html',
+    styleUrls: ['./bs3-table-row.component.scss']
 })
 export class Bs3TableRow implements OnInit, AfterContentInit {
 

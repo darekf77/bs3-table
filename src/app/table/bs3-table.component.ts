@@ -15,12 +15,12 @@ import { Bs3TableDetails } from './bs3-table-details';
 import { Table, SortType, TableHeader, Page } from './model';
 import { ExampleRowInterface } from './example';
 
-const id: string = 'bs3-table';
+
 
 @Component({
-    selector: id,
-    template: require(`./${id}.component.html`),
-    styles: [require(`./${id}.component.scss`)]
+    selector: 'bs3-table',
+    templateUrl: './bs3-table.component.html',
+    styleUrls: ['./bs3-table.component.scss']
 })
 export class Bs3Table implements OnInit, OnDestroy, AfterContentInit {
 
