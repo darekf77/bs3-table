@@ -2,7 +2,7 @@ import { EventEmitter } from '@angular/core';
 
 import { Subscription, Observable, Subject } from 'rxjs';
 
-import { Log, Level } from 'ng2-logger/ng2-logger';
+import { Log, Level } from 'ng2-logger';
 const log = Log.create('table class', Level.__NOTHING);
 
 import { TableHeader } from './table-header.class';

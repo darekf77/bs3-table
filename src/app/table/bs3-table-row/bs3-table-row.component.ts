@@ -5,7 +5,7 @@ import {
 import { Bs3TableCell } from './bs3-table-cell';
 
 
-import { Log, Level } from 'ng2-logger/ng2-logger';
+import { Log, Level } from 'ng2-logger';
 const log = Log.create('bs3-table-row', Level.__NOTHING);
 
 
