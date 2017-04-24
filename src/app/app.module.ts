@@ -16,7 +16,7 @@ import { TextMaskModule } from 'angular2-text-mask';
 
 import { BsTableModule } from './table';
 import { Resource } from 'ng2-rest/ng2-rest';
-import { Ng2BootstrapModule } from 'ng2-bootstrap';
+import { Ng2BootstrapModule } from 'ngx-bootstrap';
 
 import { PreviewComponent, DataService } from './preview/preview.component';
 

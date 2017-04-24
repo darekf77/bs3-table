@@ -5,7 +5,7 @@ import {
 } from '@angular/core';
 
 import { Subscription, Observable } from 'rxjs';
-import { PaginationComponent } from 'ng2-bootstrap/ng2-bootstrap';
+import { PaginationComponent } from 'ngx-bootstrap';
 import { Log, Level } from 'ng2-logger';
 const log = Log.create('bs3-table', Level.__NOTHING);
 log.color = 'blue';
