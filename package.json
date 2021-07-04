@@ -404,5 +404,5 @@
     "url": "https://github.com/darekf77/bs3-table/issues"
   },
   "homepage": "https://github.com/darekf77/bs3-table#readme",
-  "private": false
+  "private": true
 }
