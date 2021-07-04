@@ -91,7 +91,7 @@
     "private": true
   },
   "name": "bs3-table",
-  "version": "0.0.18",
+  "version": "0.0.19",
   "description": "Very universal table component for angular 2 appst",
   "keywords": [
     "angular2",
