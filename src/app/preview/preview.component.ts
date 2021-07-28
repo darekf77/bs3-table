@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { Injectable } from '@angular/core';
 
 import { Table, Page } from '../table';
-import { Resource, MockingMode, MockRequest } from 'ng2-rest/ng2-rest';
+import { Resource, MockingMode, MockRequest } from 'ng2-rest';
 
 interface DataModel {
   name: string;
@@ -59,5 +59,3 @@ export class PreviewComponent implements OnInit {
   }
 
 }
-
-

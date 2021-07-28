@@ -5,8 +5,8 @@
  * Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE)
  */
 /*! normalize.css v4.0.0 | MIT License | github.com/necolas/normalize.css */
-@import url("https://fonts.googleapis.com/css?family=Lato:400,300,300italic,400italic,700,700italic");
-@import url("https://fonts.googleapis.com/icon?family=Material+Icons");
+@import url('https://fonts.googleapis.com/css?family=Lato:400,300,300italic,400italic,700,700italic');
+@import url('https://fonts.googleapis.com/icon?family=Material+Icons');
 html {
   font-family: sans-serif;
   -ms-text-size-adjust: 100%;
