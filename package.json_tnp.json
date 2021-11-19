@@ -87,5 +87,6 @@
     "bootstrap",
     "bootstrap3"
   ],
-  "private": true
+  "private": true,
+  "workerPlugins": {}
 }

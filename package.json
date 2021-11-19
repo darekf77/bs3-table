@@ -88,7 +88,8 @@
       "bootstrap",
       "bootstrap3"
     ],
-    "private": true
+    "private": true,
+    "workerPlugins": {}
   },
   "name": "bs3-table",
   "version": "0.0.19",
