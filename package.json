@@ -89,7 +89,8 @@
       "bootstrap3"
     ],
     "private": true,
-    "workerPlugins": {}
+    "workerPlugins": {},
+    "linkedRepos": []
   },
   "name": "bs3-table",
   "version": "0.0.19",
@@ -399,8 +400,5 @@
     "url": "https://github.com/darekf77/bs3-table/issues"
   },
   "homepage": "https://github.com/darekf77/bs3-table#readme",
-  "private": true,
-  "recreatedFrom": {
-    "tnp.json": true
-  }
+  "private": true
 }
