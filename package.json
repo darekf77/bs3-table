@@ -90,7 +90,9 @@
     ],
     "private": true,
     "workerPlugins": {},
-    "linkedRepos": []
+    "linkedRepos": [],
+    "smartContainerTarget": "",
+    "smartContainerBuildTarget": ""
   },
   "name": "bs3-table",
   "version": "0.0.19",
